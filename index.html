@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que este documento es un archivo HTML5. -->
+<html lang="es">
+<!-- Abre la etiqueta <html> y especifica que el idioma del contenido es español (es). -->
+<head>
+    <title>Aprendizaje Amin</title>
+    <!-- Establece el título de la página que se mostrará en la pestaña del navegador. -->
+
+    <meta charset="utf-8">
+    <!-- Especifica la codificación de caracteres del documento como UTF-8, que admite una amplia gama de caracteres. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Controla cómo se muestra la página en dispositivos móviles:
+         - width=device-width: El ancho del contenido se ajusta al ancho de la pantalla del dispositivo.
+         - initial-scale=1.0: Establece el nivel de zoom inicial.
+         - maximum-scale=1.0: Evita que el usuario pueda hacer zoom.
+         - user-scalable=no: Impide que el usuario escale la página. -->
+
+    <link href="ESTILOS_CSS/estilos.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Vincula el archivo CSS externo 'estilos.css' que contiene los estilos de la página.
+		 -href=indica donde se ubica el archivo css
+         - rel="stylesheet": Indica que se trata de una hoja de estilos.
+         - type="text/css": Especifica el tipo de contenido como CSS.
+         - media="all": Indica que este estilo se aplicará a todos los dispositivos. -->
+</head>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- 											Cuerpo de la pagina web							  -->
+
+<body ><!--Cada id debe ser único dentro de la misma página, lo que significa que no puedes tener dos elementos con el mismo id-->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!--      										Contenedor del menú 							  -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Aprendizaje Amin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="ESTILOS_CSS/estilos.css" rel="stylesheet" type="text/css" media="all">
+    <script>
+        let intentos = 0;
+        const contrasenaCorrecta = "Gankar11";
+        
+        function solicitarContrasena() {
+            while (intentos < 2) {
+                let contrasenaIngresada = prompt("Por favor, ingrese la contraseña:");
+                if (contrasenaIngresada === contrasenaCorrecta) {
+                    mostrarContenido(); // Muestra el contenido si la contraseña es correcta
+                    return; // Permite el acceso
+                } else {
+                    intentos++;
+                    alert("Contraseña incorrecta. Intento " + intentos + " de 2.");
+                }
+            }
+            // Si llega a este punto, significa que se han fallado 2 intentos
+            alert("Has fallado 2 veces. La página se cerrará y serás redirigido.");
+            window.location.href = "images/mono.png"; // Cambia esto a la ruta de tu imagen
+        }
+
+        function mostrarContenido() {
+            document.getElementById('contenido').style.display = 'block'; // Muestra el contenido
+            document.getElementById('bloqueo').style.display = 'none'; // Oculta el bloque de contraseña
+        }
+
+        window.onload = function() {
+            solicitarContrasena(); // Llama a la función al cargar la página
+            // Oculta el contenido hasta que se ingrese la contraseña correcta
+            document.getElementById('contenido').style.display = 'none'; 
+        };
+    </script>
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div style="
+	background-image: url('images/02.jpg'); /* Imagen de fondo */ 
+	background-repeat: no-repeat; /* Evita que la imagen se repita */ 
+	background-size: cover; escala la imagen para que cubra todo el área del contenedor
+	background-position: center 40%; /* La imagen de fondo se posiciona centrada horizontalmente, pero se desplaza un 40% verticalmente desde la parte superior */ 
+	position: relative; /* Posiciona el contenedor de forma relativa */
+	height: 450px; /* Altura fija del contenedor */ 
+	margin: -10px 0 0 0; /* Aplica un margen negativo de -10 píxeles en la parte superior, lo que hará que el contenedor se desplace 10 píxeles hacia arriba */
+	z-index: 1;" <!-- dar prioridad a los  elementos con un z-index ,superior index mas prioridad que el menor si es mayor se supondra encima del pequeño -->
+	><!-- estilo agregado desde css no funciona-->
+<!-- 	Ejemplo práctico:
+Si tienes un contenedor con position: relative; y luego le dices top: 20px; left: 10px;, este se moverá 20 píxeles hacia abajo y 10 píxeles hacia la derecha desde su posición original.
+Sin position: relative, los elementos con position: absolute en su interior no tendrían referencia clara para posicionarse. -->
+	
+	<link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
+
+<!-- vincula los iconos al html como el de la flecha de arduino -->
+	
+	
+	
+        <div class="contenedor"><!--Contenedor negro semi-transparente  en css-->
+                <nav>   <!-- crea una seccion de navegacion sin esto  quedaria muy feo como si fuera texto de word  -->
+                    <ul>
+					<!--<ul>: Define el inicio de una lista no ordenada.     <li>: Define cada elemento de la lista. -->
+					<!--  <a>crear un enlace o hiperenlace a un recurso externo. # no apunta a ninguna URL válida -->
+                        <li ><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="#" class="flecha_arduino">ARDUINO </a>
+							
+						<!-- i class="flecha arduino	el icono esta vinculado al css 
+						y en el css se especifica cual tipo de flecha usar ,ademas se vincula su documento arriba para poder usarlos  --> 
+                            <ul class="amin_2"><!--estilo css  -->
+                                <li><a href="pages/CLASES_YOUTUBE_1.html">Clases de YouTube 1</a></li>
+                                <li><a href="pages/Setup y instalacion de arduino.html">Configuración e instalación</a></li>
+                                <li>
+                                    <a href="#" class="flecha_piezas" >Piezas Arduino</a>
+                                    <ul class="amin_3">
+                                        <li><a href="pages/Componentes.html">Componentes</a></li>
+                                        <li><a href="pages/DATASHEETS.html">Datasheets</a></li>
+                                        <li><a href="pages/OTROS.html">Otros</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="pages/Driver del microcontrolador arduino.html">Driver del microcontrolador</a></li>
+                                <li><a href="pages/Partes de arduino.html">Partes de Arduino</a></li>
+                                <li><a href="pages/tipos de arduino.html">Tipos de Arduino</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pages/Componentes eléctronicos.html">Componentes eléctricos</a></li>
+                        <li><a href="pages/Conceptos V, A, Ω, P, etc.html">Conceptos V,A,Ω,P,etc</a></li>
+                        <li><a href="pages/Motores electricos.html">Motores eléctricos</a></li>
+                        <li><a href="pages/IA.html">IA</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Título debajo del menú -->
+                <div style="text-align: center; margin-top: 20px;">
+                    <h1 class="titulo" >Proceso de aprendizaje</h1>
+                    <p class="subtitulo">Contenido de Arduino, motores eléctricos, etc.</p>
+                </div>
+        </div>
+    </div>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+												<!-- MAIN (OBJETIVOS) -->
+	  <!--  La etiqueta <main> en HTML se utiliza para definir el contenido principal de un documento, mejorando la semántica y la accesibilidad. 
+   Debe contener contenido único y relevante, y solo debe haber un elemento <main> por página. -->
+<!--    útil para aplicar estilos específicos (como colores, fuentes o formato) a partes concretas del contenido utilizando CSS o JavaScript -->
+    <div class="contenedor_1 " >
+      <h2>OBJETIVOS Y PROYECTOS QUE TENGO QUE REALIZAR</h2>
+      <p>¡Animo! Tú puedes</p>
+	  
+	    <!-- Flechas de navegación,importante las posiciones relativas y absolutas ,se me fue arriba del todo por no tener relativa -->
+  <button class="flecha" id="prev">&#10094;</button>
+  <button class="flecha" id="next">&#10095;</button>
+ 
+  <ul class="contenedor_listas"  >
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">1-Crear un dron</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">2-Brazo robótico como fanuc</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">3-Coche que se mueva</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">4-Un teslametro casero</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">5-Control de acceso en mi habitación con clave</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+	
+	
+	
+	
+	<li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">6-Incorporar inteligencia artificial a mis proyectos</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">7-Mando de play personalizado para jugar al fornite</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">8-Aprender hacer páginas web chetadas</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">9-Aprender mecanografía e inglés</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">10-Blender creación de diversos personajes y después animación</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+	
+	<li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">11-Aprender html mas profundo</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">12-Lenguajes javascripts,etc</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">13-mirar imagin y ver donde deberia invertir y cuanto interes me corresponde</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">14-Mejorar la mente</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+    <li class="formato_celdas" style="background-image: url('images/320x320.png');">
+      <a class="formato_enlace" href="#">15-Aprender a Cocinar</a>
+      <span class="estado">Sin cumplir</span>
+    </li>
+
+  </ul>
+</div>
+
+
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="contenedor_2 ">
+  <section> 
+    <div >
+     <span class="titulo3 ">Pequeña descripcion de esta pagina</span>
+      <p><br>He creado esta pagina para subir todo lo que voy aprendiendo en mi tiempo libre  y asi si algun dia se me olvida algo lo miro en cualquier parte del mundo porque esta subido en internet.</p>
+    </div>
+    <ul class="contenedor_3 " style="display: flex; justify-content: center;" >
+      <li  style="text-align: center;">
+        <div style="display: inline-block;" ><img src="images/perfil.png" alt=""> <span ><strong>Mohamed Amin,Kemmas</strong>  / <em>Name</em></span>
+          <blockquote>"Soy como un PLC: siempre controlando el caos, pero con buen flujo eléctrico y cero fallos." ⚡🔧</blockquote>
+        </div>
+      </li>
+     
+    </ul>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+
+
+	
+	
+	
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- PIE DE PAGINA -->
+
+<!-- propiedades de la imagen -->
+<div style="
+    position: relative;  /* Posiciona el contenedor de forma relativa  ,creo que se dice que el contenido influye en el resto*/
+    background-image: url('images/backgrounds/01.jpeg'); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Color del texto blanco */
+    padding: 20px; /* Espaciado interno */
+    height: 300px; /* Altura fija del contenedor */
+">
+  <div class="capa"></div> <!-- Capa transparente encima de la imagen -->
+    <div class="contenido_amin"><!-- Capa transparente encima de la imagen -->
+        <h6>Mis redes sociales son:</h6>
+        <p>Dejo mi Instagram y el correo electrónico</p>
+        <ul>
+            <li>
+                <address class="contact-link">En algún lugar del mundo</address>
+            </li>
+            <li> <a href="#" class="contact-link">(014) 345 6789</a></li>
+            <li> <a href="#" class="contact-link">aminmohamed17022002@gmail.com</a></li>
+            <li><a href="images/logo_instagram.jpg" class="contact-link">amiinchu</a></li> 
+        </ul>
+    </div>
+
+
+<script src="scripts/scripts.js"></script>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
